@@ -1,9 +1,10 @@
 import './App.css';
-import SearchMovie from './Components/SearchMovie'
+import SearchMovie from './Components/SearchMovie';
+import Header from './Components/Header';
 function App() {
   return (
     <div className="container">
-      <h1 className="title">Movie Kode</h1>
+      <Header />
       <SearchMovie />
     </div>
   );
