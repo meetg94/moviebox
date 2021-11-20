@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #191A19;
+  background-color: lightcoral;
   color: black;
 }
 
@@ -140,4 +140,20 @@ small {
 .card-desc {
   font-size: 18px;
   font-family: "Helvetica Neue";
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  margin: 1rem;
+  width: 250px;
+  background: white;
+  position: relative;
+}
+
+.movie img {
+  max-width: 100%;
 }
