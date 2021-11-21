@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import logo from './Assets/logo.png';
 import Movie from './Movie';
 
 function Header() {
@@ -19,10 +18,6 @@ useEffect(() => {
 
     return (
         <>
-            <div className="title-logo">
-                <h1 className="title">Popcorn Flicks</h1>
-                <img className="logo" src={logo}></img>
-            </div>
             <div className="movie-container">
                 {movies.length > 0 && movies.map((movie) => <Movie key={movie.id}
             {...movie}/>)}

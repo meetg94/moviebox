@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
+import Header from './Header';
+
 
 export default function SearchMovie() {
+
+    const [show, setShow] = useState(true)
 
     const [query, setQuery] = useState('');
 
@@ -25,13 +29,18 @@ export default function SearchMovie() {
         <>
             <form className="form" onSubmit={searchMovies}>
                 <label className="label" htmlFor="query">Movie Name: </label>
-                <input className="input" type="text" name="query" placeholder="Search.." value={query} onChange={(e) => setQuery(e.target.value)}/>
-                <button className="button" type="submit">Search</button>
+                <input className="input" type="text" name="query" placeholder="Search.." value={query} onChange={(e) => setQuery(e.target.value)}
+
+                />
+                <button className="button" type="submit"  onClick={() =>setShow(false)}>Search</button>
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (<MovieCard movie={movie} key={movie.id} />
                 ))}
             </div>
+            {
+                show?<Header />:null
+            }
         </>
     )
 }
