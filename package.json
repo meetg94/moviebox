@@ -35,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+    "scripts": {
+      "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+      "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+      "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test"
+    }
+
 }
