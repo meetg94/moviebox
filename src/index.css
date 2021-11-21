@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightcoral;
+  background-color: #e4e7ed;
   color: black;
 }
 
@@ -152,8 +152,30 @@ small {
   width: 250px;
   background: white;
   position: relative;
+  overflow: hidden;
 }
+
 
 .movie img {
   max-width: 100%;
+  border-radius: 3px;
+  border: 3px solid #dc0404;
+}
+
+.movie-over {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0%);
 }
